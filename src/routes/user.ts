@@ -1,4 +1,3 @@
-
 // import { Router } from "express";
 
 // const router = Router();
@@ -9,14 +8,16 @@
 
 // export default router;
 
-import { Router } from "express";
+import { Router } from 'express';
+import { getUser } from "../controllers/userController";
 
-const router = Router();
+const router = Router();// controllerを使ってレスポンスを作る
 
 // GET /api/users
-router.get("/", (req, res) => {
-  res.json({ users: [] });
+router.get('/', (_req, res) => {
+  const user = getUser()
+  // res.json({ users: [] });
+  res.status(200).json(user)
 });
 
 export default router;
-

@@ -1,7 +1,7 @@
-import app from "./app";
+import app from './app';
 
 const port = 4000;
 
 app.listen(port, () => {
-    console.log(`server running on http://localhost:${port}`);
-})
+  console.log(`server running on http://localhost:${port}`);
+});
